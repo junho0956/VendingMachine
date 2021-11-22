@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColaCola</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resource/style/reset.css">
+    <link rel="stylesheet" href="resource/style/style.css">
+</head>
+<body>
+    <div id="App">
+        <h1 class="tit-app"><img src="./resource/img/logo.png" alt=""></h1>
+        <div class="container">
+            <section class="vending-machine">
+                <h2 class="ir">자판기 화면</h2>
+                <!-- menu -->
+                <ul class="list-item"></ul>
+                <!-- balance -->
+                <div class="cont-return">
+                    <div class="info-balance">
+                        잔액 : 
+                        <span class="txt-balance">0</span>
+                    </div>
+                    <button type="button" class="btn-return">거스름돈 반환</button>
+                </div>
+                <div class="cont-put">
+                    <input type="number" class="inp-put" placeholder="입금액 입력">
+                    <button class="btn-put">입금</button>
+                </div>
+                <!-- basket -->
+                <div class="cont-get">
+                    <strong class="ir">선택한 음료</strong>
+                    <ul class="list-item-staged"></ul>
+                    <button type="button" class="btn-get">획득</button>
+                </div>
+            </section>
+            <section class="my-info">
+                <h2 class="ir">나의 정보 화면</h2>
+                <div class="cont-mymoney">
+                    <div class="info-mymoney">
+                        소지금 :
+                        <span class="txt-mymoney"></span>
+                    </div>
+                </div>
+                <div class="cont-myitems">
+                    <strong>획득한 음료</strong>
+                    <ul class="list-item-staged"></ul>
+                    <strong class="txt-total">
+                        총금액 :
+                        <span class="txt-total-money"></span>
+                    </strong>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="./resource/js/modules.js"></script>
+    <script src="./resource/js/machine/basket.js"></script>
+    <script src="./resource/js/myinfo/myinfo.js"></script>
+    <script src="./resource/js/machine/balance.js"></script>
+    <script src="./resource/js/machine/menu.js"></script>
+    <script src="./resource/js/data.js"></script>
+    <script src="./resource/js/machine/machine.js"></script>
+    <script src="./resource/js/App.js"></script>
+</body>
+</html>
