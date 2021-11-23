@@ -22,7 +22,6 @@ class Menu {
     }
 
     render() {
-        console.log(this.cola);
         this.$menu.innerHTML = this.cola.map((item) => {
             return `
                 <li>

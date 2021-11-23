@@ -33,7 +33,7 @@ export async function getCola(req, res, next) {
 export async function buyCola(req, res, next){
     try{
         const resDataStatus = await menuRepository.buyCola(req.body.basket);
-        return res.status(200).json(resDataStatus);
+        return res.status(201).json(resDataStatus);
     }
     catch(error){
         console.error(error);
@@ -43,7 +43,7 @@ export async function buyCola(req, res, next){
 export async function updateDeposit(req, res, next) {
     try{
         const result = await menuRepository.updateDeposit(req.body.money);
-        return res.status(200).json(result);
+        return res.status(201).json(result);
     }
     catch(error){
         console.error(error);

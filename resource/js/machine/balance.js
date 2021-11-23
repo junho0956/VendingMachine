@@ -21,7 +21,7 @@ class Balance {
 
         const deposit = () => {
             if(this.$input.value) {
-                if(this.$input.value <= getMyMoney()){
+                if(Number(this.$input.value) <= Number(getMyMoney())){
                     requestDeposit(this.$input.value)
                     .then(res => {
                         this.setState(this.balance + Number(this.$input.value));
