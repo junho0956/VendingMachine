@@ -3,7 +3,7 @@ const headers = {'Content-Type':'application/json'};
 
 const api = {
     colaStatus: (id) => {
-        return fetch(`${baseURL}/status/${id}`, {
+        return fetch(`${baseURL}/cola?id=${id}`, {
             method: "GET",
             headers
         })

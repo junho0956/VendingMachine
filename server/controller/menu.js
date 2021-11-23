@@ -1,14 +1,14 @@
 import * as menuRepository from '../model/menu.js';
 
-export async function getStatus(req, res, next) {
-    try{
-        const colaStatus = await menuRepository.getStatus(req.params.id);
-        return res.status(200).json(colaStatus);
-    }
-    catch(error){
-        console.error(error);
-    }
-}
+// export async function getStatus(req, res, next) {
+//     try{
+//         const colaStatus = await menuRepository.getStatus(req.params.id);
+//         return res.status(200).json(colaStatus);
+//     }
+//     catch(error){
+//         console.error(error);
+//     }
+// }
 
 export async function getMoney(req, res, next) {
     try{
@@ -22,8 +22,13 @@ export async function getMoney(req, res, next) {
 
 export async function getCola(req, res, next) {
     try{
-        const cola = await menuRepository.getCola();
-        return res.status(200).json(cola);
+        if(req.query.id){
+            const colaStatus = await menuRepository.getStatus(req.query.id);
+            return res.status(200).json(colaStatus);
+        } else {
+            const cola = await menuRepository.getCola();
+            return res.status(200).json(cola);
+        }
     }
     catch(error){
         console.error(error);
