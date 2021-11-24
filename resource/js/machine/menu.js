@@ -5,6 +5,15 @@ class Menu {
         this.cola = cola;
         this.$menu = $target.querySelector('.list-item');
         this.addCola = addCola;
+
+        this.$menu.addEventListener('click', (e) => {
+            const button = e.target.closest('button');
+            if(!button.classList.contains('select')) {
+                button.classList.add('select');
+            }
+            addCola(button.id);
+        })
+
         this.render();
     }
 
@@ -36,14 +45,5 @@ class Menu {
                 </li>
             `
         }).join('');
-
-        Array.from(this.$menu.children).forEach((child) => {
-            child.addEventListener('click', (e) => {
-                if(!e.currentTarget.children[0].classList.contains('select')){
-                    e.currentTarget.children[0].classList.add('select');
-                }
-                this.addCola(e.currentTarget.children[0].id);
-            })
-        })
     }
 }
