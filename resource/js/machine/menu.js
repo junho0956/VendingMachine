@@ -33,12 +33,12 @@ class Menu {
     render() {
         this.$menu.innerHTML = this.cola.map((item) => {
             return `
-                <li>
+                <li class="${item.count === 0 ? 'soldout' : ''}">
                     <button 
                     class="btn-item"
                     id=${item.id}
                 >   
-                    <img src="${item.image}" alt="클릭시 ${item.item}을 장바구니에 추가합니다." class="${item.count > 0 ? 'img-item' : 'img-item soldout'}">
+                    <img src="${item.image}" alt="클릭시 ${item.item}을 장바구니에 추가합니다." class="img-item">
                     <strong class="tit-item">${item.item}</strong>
                     <span class="txt-item">${writePricePoints(item.price)}원</span>
                 </button>

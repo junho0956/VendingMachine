@@ -41,9 +41,9 @@ export async function buyCola(basket) {
                     if(dummyData.cola[i].id === cola.id){
                         if(dummyData.cola[i].count >= cola.count){
                             dummyData.cola[i].count -= cola.count;
-                            if(dummyData.cola[i].count == 0){
-                                dummyData.cola[i].image = `${baseURL}/img/Sold-out.png`;
-                            }
+                            // if(dummyData.cola[i].count == 0){
+                            //     dummyData.cola[i].image = `${baseURL}/img/Sold-out.png`;
+                            // }
                         }
                         break;
                     }
