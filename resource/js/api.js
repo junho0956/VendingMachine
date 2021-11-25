@@ -1,8 +1,8 @@
 const baseURL = 'http://localhost:3000/menu';
 const headers = {'Content-Type':'application/json'};
 
-const api = {
-    colaStatus: (id) => {
+const API = {
+    productStatus: (id) => {
         return fetch(`${baseURL}/cola?id=${id}`, {
             method: "GET",
             headers
@@ -24,7 +24,7 @@ const api = {
             headers
         })
     },
-    buyCola: (basket) => {
+    buyProduct: (basket) => {
         return fetch(`${baseURL}/buy`, {
             method: 'POST',
             body: JSON.stringify({basket}),
@@ -32,7 +32,7 @@ const api = {
         })
         .then(res => res.json())
     },
-    init: async() => {
+    initData: async() => {
         return await Promise.all([
             fetch(`${baseURL}/money`).then(res => res.json()),
             fetch(`${baseURL}/cola`).then(res => res.json())

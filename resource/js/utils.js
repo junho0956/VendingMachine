@@ -1,4 +1,4 @@
-function writePricePoints(number) {
+function setPricePoints(number) {
     const str = Number(number).toString().split('').reverse();
     const revs = [];
     let cnts = 1;
