@@ -2,7 +2,7 @@
 사용 스택 - html, css, javascript
 
 ### 목표
-자바스크립트로 간단한 상태관리 연습하기
+자바스크립트로 상태관리 연습하기
 
 ### 실행
 
@@ -51,3 +51,6 @@ Open `index.html ` with Live server
 |자판기 입금하기|PUT|`/deposit`|`{money}`|`{money}`|201|
 |자판기 출금하기|PUT|`/withdraw`|`{money}`||204|
 |상품 구매하기|POST|`/buy`|`{[basket]}`|`{result, money, cola}`|201|
+
+### 결과물
+![](./벤딩캡처.PNG)
