@@ -22,12 +22,13 @@ Open `index.html ` with Live server
     └─ img
     └─ js
         └─ machine
-        │   └─ balance.js
-        │   └─ basket.js
+        │   └─ balanceComponent.js
+        │   └─ basketComponent.js
         │   └─ machine.js
-        │   └─ menu.js
+        │   └─ menuComponent.js
+        │   └─ productList.js
         └─ myinfo
-        │   └─ myinfo.js
+        │   └─ myinfoComponent.js
         └─ App.js
         └─ data.js
         └─ modules.js
