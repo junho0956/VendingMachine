@@ -13,10 +13,12 @@ class MenuComponent {
 
         this.$menu.addEventListener('click', (e) => {
             const button = e.target.closest('button');
-            if(!button.classList.contains('select')) {
-                button.classList.add('select');
+            if(button){
+                if(!button.classList.contains('select')) {
+                    button.classList.add('select');
+                }
+                selectProduct(button.id);
             }
-            selectProduct(button.id);
         })
 
         this.render(this.productList.getProducts());
