@@ -1,15 +1,5 @@
 import * as menuRepository from '../model/menu.js';
 
-// export async function getStatus(req, res, next) {
-//     try{
-//         const colaStatus = await menuRepository.getStatus(req.params.id);
-//         return res.status(200).json(colaStatus);
-//     }
-//     catch(error){
-//         console.error(error);
-//     }
-// }
-
 export async function getMoney(req, res, next) {
     try{
         const money = await menuRepository.getMoney();
@@ -20,14 +10,14 @@ export async function getMoney(req, res, next) {
     }
 }
 
-export async function getCola(req, res, next) {
+export async function getProduct(req, res, next) {
     try{
         if(req.query.id){
-            const colaStatus = await menuRepository.getStatus(req.query.id);
-            return res.status(200).json(colaStatus);
+            const product = await menuRepository.getProductById(req.query.id);
+            return res.status(200).json(product);
         } else {
-            const cola = await menuRepository.getCola();
-            return res.status(200).json(cola);
+            const products = await menuRepository.getProducts();
+            return res.status(200).json(products);
         }
     }
     catch(error){
@@ -35,9 +25,9 @@ export async function getCola(req, res, next) {
     }
 }
 
-export async function buyCola(req, res, next){
+export async function buyProduct(req, res, next){
     try{
-        const resDataStatus = await menuRepository.buyCola(req.body.basket);
+        const resDataStatus = await menuRepository.buyProduct(req.body.basket);
         return res.status(201).json(resDataStatus);
     }
     catch(error){
