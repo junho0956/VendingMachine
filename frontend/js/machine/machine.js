@@ -85,7 +85,7 @@ class App {
                         this.$myinfo.setState(basket);
                         this.$basket.setState([]);
                         this.$menu.initSelected();
-                        this.$menu.setState(res.cola);
+                        this.$menu.setState(res.product);
                         alert('구매완료');
                     } else {
                         console.error(res);

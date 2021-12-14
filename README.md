@@ -46,11 +46,11 @@ Open `index.html ` with Live server
 |action|method|source|request|response|status|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |자판기 잔액 가져오기|GET|`/money`||`{money}`|200|
-|자판기 재고 가져오기|GET|`/cola`||`{[cola]}`|200|
-|자판기 특정 재고 가져오기|GET|`/cola?id`||`{cola}`|200|
+|자판기 재고 가져오기|GET|`/product`||`{productType[]}`|200|
+|자판기 특정 재고 가져오기|GET|`/product?id`||`{productType}`|200|
 |자판기 입금하기|PUT|`/deposit`|`{money}`|`{money}`|201|
 |자판기 출금하기|PUT|`/withdraw`|`{money}`||204|
-|상품 구매하기|POST|`/buy`|`{[basket]}`|`{result, money, cola}`|201|
+|상품 구매하기|POST|`/buy`|`{[basket]}`|`{result, money, product}`|201|
 
 ### 결과물
-![](./벤딩캡처.PNG)
+![img](example.PNG)

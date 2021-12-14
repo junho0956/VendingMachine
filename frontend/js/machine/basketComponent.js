@@ -19,7 +19,7 @@ class BasketComponent {
     }
 
     checkProductInBasket(id){
-        return this.basket.find(cola => cola.id == id);
+        return this.basket.find(product => product.id == id);
     }
 
     getProductForm(productInfo){
@@ -42,13 +42,13 @@ class BasketComponent {
     }
 
     render(){
-        this.$basket.innerHTML = this.basket.map(cola => {
+        this.$basket.innerHTML = this.basket.map(product => {
             return `
                 <li class="item-staged">
-                    <img src=${cola.image} alt="" class="img-item">
-                    <strong class="txt-item">${cola.item}</strong>
-                    <span class="ir">${cola.item}을 ${cola.count}개 선택하셨습니다.</span>
-                    <span class="num-counter">${cola.count}</span>
+                    <img src=${product.image} alt="" class="img-item">
+                    <strong class="txt-item">${product.item}</strong>
+                    <span class="ir">${product.item}을 ${product.count}개 선택하셨습니다.</span>
+                    <span class="num-counter">${product.count}</span>
                 </li>
             `
         }).join('');
