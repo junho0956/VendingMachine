@@ -233,6 +233,12 @@ body{
     flex: 2;
 }
 
+.inp-put::-webkit-inner-spin-button,
+.inp-put::-webkit-outer-spin-button{
+    display: none;
+    /* -webkit-appearence => propoerty is nonstandard; */
+}
+
 .btn-put {
     /* width: 100%; */
     height: 32px;
