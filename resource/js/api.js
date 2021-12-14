@@ -3,7 +3,7 @@ const headers = {'Content-Type':'application/json'};
 
 const API = {
     productStatus: (id) => {
-        return fetch(`${baseURL}/cola?id=${id}`, {
+        return fetch(`${baseURL}/product?id=${id}`, {
             method: "GET",
             headers
         })
@@ -35,7 +35,7 @@ const API = {
     initData: async() => {
         return await Promise.all([
             fetch(`${baseURL}/money`).then(res => res.json()),
-            fetch(`${baseURL}/cola`).then(res => res.json())
+            fetch(`${baseURL}/product`).then(res => res.json())
         ])
     }
 }
